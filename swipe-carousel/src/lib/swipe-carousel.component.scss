@@ -1,0 +1,99 @@
+
+:host ::ng-deep .carousel {
+  overflow: hidden;
+  position: relative;
+  margin: 0 24px;
+  max-width: 970px;
+
+  h2 {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 35px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 6000px;
+  }
+
+  .carousel-content {
+    display: flex;
+    overflow-x: auto;
+    width: 70%;
+    height: 50px;
+    font-size: 50px;
+    color: #0d82ff;
+    padding-top: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000000;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    .carousel-item{
+      display: inline;
+      padding: 5px;
+    margin-right: 15px;
+    }
+  }
+  .carousel-content::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    top: 280px;
+    cursor: pointer;
+  }
+
+  .arrow-left {
+    left: 0;
+  }
+
+  .arrow-right {
+    right: 0;
+  }
+
+  .indicators-carousel {
+    width: 100%;
+    margin-left: 1%;
+
+    .indicators-carousel-container {
+      .indicator-carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #adcedf;
+        display: inline-block;
+        margin-right: 7px;
+        cursor: pointer;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &.active {
+          background-color: #1c2d66;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: 769px) {
+    .arrow-left,
+    .arrow-right {
+      top: 415px;
+    }
+  }
+
+  @media all and (min-width: 800px) {
+    margin: 0 auto;
+  }
+}

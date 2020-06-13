@@ -1,0 +1,20 @@
+<div
+  class="carousel"
+  (mouseover)="onStopRotation()"
+  (mouseout)="onStartRotation()"
+  (swipeleft)="onSwipeLeft($event)"
+  (swiperight)="onSwipeRight($event)"
+  #carouselWrapper
+>
+
+  <ul  class="carousel-content" #carousel>
+    <li
+    *ngFor="let item of items"
+     class = "carousel-item" 
+    >
+    {{item}}
+  </li>
+  </ul>
+
+  
+</div>
